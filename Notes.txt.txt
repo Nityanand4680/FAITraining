@@ -1,0 +1,24 @@
+.NET is a technology/Framework/ platform for developing various kinds of Apps using various programming languages that run on various platforms. 
+
+
+
+
+
+VS maintains a clean seperation of the code and its management. The C# code is created in the form of text files saved with extension .cs. These files will be grouped into a Project. A project when built will generate an output file either as EXE or DLL.
+Multiple such projects will be grouped into a Solution. Solution will be a file with an extension .sln. Projects will be with an extension .csproj. 
+
+
+Contents of the Hello world Program:
+using statement is used to include the namespaces of those classes that U want to use in UR code.
+All Classes are recommended to be grouped into namespaces. By Default, VS will create namespace in the name of the project. Namespaces is purely conceptual grouping. It neither allocates any memory or any kind of File location. It can span across multiple files. 
+Every App based Project will have an entry point, the place from where UR program executes. Main is the entry point of any C# Application. It is case sensitive. The function is not a global function like C/C++. Main is always a part of a class and it returns either void or int. Main must be static. 
+Console is a class that represents the Single Console Window of UR Application. Its WriteLine function is used to write text on the Console Window with a Carrier return.  
+
+Console.ReadLine returns string. If U want to convert to another data type, use the Parse method of the data type to convert it to its type. 
+
+for loop is the simpliest way of using a piece of code of a fixed no of times. It can be reversible also
+foreach loop is used only on collections like Arrays, Lists. foreach is forward only and read only. foreach ensures that U will never go out of bounds in the array iteration,
+
+
+
+
