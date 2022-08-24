@@ -12,3 +12,9 @@ Training for Basic Programming
 - Classes And objects
 - Sample App with CRUD operations on Arrays.
 ## Day 3
+- Methods
+- Parameters
+- SOLID Principles
+- Inheritance
+- Method Overriding
+- Method Overloading
