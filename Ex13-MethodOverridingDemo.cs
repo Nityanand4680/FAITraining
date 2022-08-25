@@ -2,7 +2,12 @@
 namespace SampleConApp
 {
     /*
-     * If a class is inherited into another, the Super class methods can be modified by the Sub classes using the concept of 
+     * If a class is inherited into another, the Super class methods can be modified by the Sub classes using the concept of Method overriding. 
+     * In this case, the Super class must use a modifier called virtual that can allow the derived classes to modify. 
+     * The Sub classes can override the virtual methods using a modifier called override. 
+     * Only virtual methods or override methods of the base class can be overriden in the derived class. 
+     * When U override, U cannot modify the signature of the method. 
+     * Method overriding is Runtime polymorphism as the method call will be determined at runtime based on the class to which U have instantiated the object. See the example of Facgory
      */
 
     class Account
