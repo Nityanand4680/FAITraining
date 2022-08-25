@@ -18,6 +18,15 @@ Console.ReadLine returns string. If U want to convert to another data type, use 
 
 for loop is the simpliest way of using a piece of code of a fixed no of times. It can be reversible also
 foreach loop is used only on collections like Arrays, Lists. foreach is forward only and read only. foreach ensures that U will never go out of bounds in the array iteration,
+------------------------------------OOPS Notes------------------------------------------------------------------
+OOP is a paradigm of creating code in a modular and reusable manner. It is based on a concept of a UDT called CLASS. The variables of the class are called as Objects. The behavior of the objects is what is called as OOP. 
+OOP features: Inheritance, Polymorphism, Encapsulation, Abstraction. 
+SOLID Principles: 
+Single responsibility Principle: The class should do only one job. 
+Open-Closed Principle: A Class is closed for modification but its Open for extension. 
+Luskov's Substitution Principle: An instance of a base class can be subtituted with any of the derived class instances if it does not alter the function signatures of the base. 
+
+
 
 
 
