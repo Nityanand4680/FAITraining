@@ -18,3 +18,10 @@ Training for Basic Programming
 - Inheritance
 - Method Overriding
 - Method Overloading
+- Abstract Classes
+- Interfaces
+- Sealed Classes
+## Day 4
+- Exception Handling
+- Generic collections: List, HashSet, Set, Dictionary
+- File IO.
