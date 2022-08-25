@@ -30,7 +30,27 @@ namespace SampleConApp
         {
             //listExample();
             //productListDemo();
-            setExample();
+            //setExample();
+            dictionaryExample();
+        }
+
+        private static void dictionaryExample()
+        {
+            Dictionary<string, string> data = new Dictionary<string, string>();
+            data.Add("Apples", "Costly");
+            data.Add("Mangoes", "Very Rich");
+            data["PineApples"] = "Very Thornly";
+            if (data.ContainsKey("Apples"))
+            {
+                Console.WriteLine("This fruit is already added");
+            }
+            else
+                data.Add("Apples", "Very Tasty");
+
+            foreach(var pair in data)
+            {
+                Console.WriteLine($"Key: {pair.Key}\tValue:{pair.Value}");
+            }
         }
 
         private static void setExample()
