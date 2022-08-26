@@ -107,11 +107,41 @@ Create a Console App that stores the Customer Records into an Array.
 
 The App should allow the User to Add, Remove, Update and Find the Customers by ID.
 
-The App should be a menu-driven App that allows the user to choose an option and perform the expected operation. The App should not terminate at any point unless chosen by the User. 
-
-Make the App Interactive with User inputs coming from Console. 
+The App should be a menu-driven App that allows the user to choose an option and perform the expected operation. The App should not terminate at any point unless chosen by the User. <br/>
+Make the App Interactive with User inputs coming from Console. <br/>
 
 Hint:
 Create separate classes for Customer, CustomerRepo which have functions of Operations, and UI Class that will handle the UI of the Application. 
 
 Make the App as modular as possible.
+### Assigment 12
+Create a Console App that stores accounts of a Bank. The Account class should be an Abstract class that contains details of Id, Name, Balance, Credit, and Debit Operations. The CalculateInterest will be an abstract method. <br/>
+Implement this method in the Subclasses like SB Account, RD Account, and FD Account. <br/>Using Runtime polymorphism, create objects of the Account class and examine how the CalculateInterest function is called.
+### Assigment 13
+Create an Class called Patient with Properties as ID, Name, Phone No, BillAmount<br/>
+Create Function to write the Patient Details to a File.<br/>
+Create a Function to read the details of the Patient from the File.<br/> 
+Test the Functions with different Values and observe the Functionality.<br/>
+
+PS: The data should be in the form of a CSV.
+### Assignment 14
+Create an interface called IDataComponent that has CRUD Functions in it to store the data of an Employee with details like ID, Name, Address and Salary. <br/>
+The following functions are required: Add, Remove, Update, FindByID and FindByName.<br/>
+The Functions should take primitive values as parameters. <br/>
+Implement the interface in a File Component Class that will store the data of the employees into a single CSV file. <br/>
+Create an UI Component that will create the interface object and call the appropriate method using a Menu driven App. The Menu should allow the user to choose the operation and appropriately perform the operations. <br/>
+
+PS: <br/>
+All the data should be stored in the Text file as CSV. <br/>
+U can choose the appropriate collection class required.<br/>
+Use StreamReader and StreamWriter to perform the File Operations.<br/>
+
+### Assignment 15
+Create a new Class called SerializationComponent with the following features:<br/>
+It should store the data of a list of Employees in an XML File.<br/>
+It should return the data of XML as a List of Employees.<br/>
+
+U should create the instance of the Component and call those functions in the Main to test. <br/>
+Test the code with different kinds of data and observe the results
+
+
