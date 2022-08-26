@@ -11,6 +11,7 @@ using System.IO;
  */
 namespace SampleConApp
 {
+    [Serializable]
     class Employee
     {
         static int empNo = 1000;
