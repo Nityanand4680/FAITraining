@@ -24,4 +24,7 @@ Training for Basic Programming
 ## Day 4
 - Exception Handling
 - Generic collections: List, HashSet, Set, Dictionary
-- File IO.
+## Day 5
+- File IO
+- Serialization: XML and Binary.
+- Delegates and Events.
