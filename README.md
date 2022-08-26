@@ -25,6 +25,7 @@ Training for Basic Programming
 - Exception Handling
 - Generic collections: List, HashSet, Set, Dictionary
 ## Day 5
+- Stack<T>, Queue<T>, SortedDictionary<K,V>
 - File IO
 - Serialization: XML and Binary.
 - Delegates and Events.
