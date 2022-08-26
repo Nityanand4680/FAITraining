@@ -114,10 +114,10 @@ Hint:
 Create separate classes for Customer, CustomerRepo which have functions of Operations, and UI Class that will handle the UI of the Application. 
 
 Make the App as modular as possible.
-### Assigment 12
+### Assignment 12
 Create a Console App that stores accounts of a Bank. The Account class should be an Abstract class that contains details of Id, Name, Balance, Credit, and Debit Operations. The CalculateInterest will be an abstract method. <br/>
 Implement this method in the Subclasses like SB Account, RD Account, and FD Account. <br/>Using Runtime polymorphism, create objects of the Account class and examine how the CalculateInterest function is called.
-### Assigment 13
+### Assignment 13
 Create an Class called Patient with Properties as ID, Name, Phone No, BillAmount<br/>
 Create Function to write the Patient Details to a File.<br/>
 Create a Function to read the details of the Patient from the File.<br/> 
