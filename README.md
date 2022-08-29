@@ -29,3 +29,13 @@ Training for Basic Programming
 - File IO
 - Serialization: XML and Binary.
 - Delegates and Events.
+
+# Week 2
+## Day 6
+- Delegates Demo
+- Memory Management with GC.
+- Destructors
+### HTML Programming
+- Basics of HTML Document
+- Lists
+- Tables
