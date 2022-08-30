@@ -13,7 +13,7 @@ nav{
 
 a{
     display: inline-block;
-    width: 100px;
+    width: 150px;
     height: 40px;
     margin: 5px;
     padding: 5px;
@@ -31,4 +31,45 @@ h1{
     margin:3px;
     text-align: center;
     background-color: coral;
+}
+table, td{
+    /*border: 1px solid blue;*/
+    /* border-collapse: collapse; */
+    /*border-radius: 10px;*/
+    border-bottom: 2px solid black;
+}
+tr:hover{
+    background-color: brown;
+    color:whitesmoke;
+}
+/* tr:nth-child(even){
+    background-color: lightcoral;
+}
+tr:nth-child(odd){
+    background-color: lightgoldenrodyellow;
+} */
+
+.card{
+    border: 1px solid black;
+    background-color: darkgoldenrod;
+    color:beige;
+    box-shadow: 5px 5px 5px blue;
+    width: 47%;
+    height: 350px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px;
+}
+.card-block{
+    display: inline-block; 
+    width:45%;
+    margin:5px;
+    padding: 5px;
+}
+input{
+  border: 2px solid blue;
+  background-color: yellow;   
+}
+input:focus{
+    background-color: red;
 }

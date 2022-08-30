@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taking User inputs</title>
+    <link rel="stylesheet" href="CommonStyle.css">
+    <script>
+        function onSubmit() {
+            //Using DOM, U should be able to get the values of the elements based on id. 
+            let name = document.getElementById("txtName").value;
+            let email = document.getElementById("txtName").value;
+            let dtDob = document.getElementById("dtDob").value;
+            let obj = {};
+            obj.name = name;
+            obj.email = email;
+            obj.dtDob = dtDob;
+            console.log(obj);
+            alert("Registered with us!!!")
+        }
+        function onChange(){
+            let value= document.getElementById("txtRange").value;//get the value of the range
+            document.getElementById("spRate").innerText = value//set it to the span element by id spRate.
+        }
+    </script>
+</head>
+<body>
+    <h1>User Registration Form</h1>
+    <div>
+        <form>
+            <p><input type="number" min="1" max="99" placeholder="Enter the Number" id="txtId"></p>
+            <p><input type="text" placeholder="Enter the name" id="txtName" required></p>
+            <p><input type="email" placeholder="Enter the Email Address" id="txtEmail" required></p>
+            <p>Enter the Date of Birth: <input type="date" id="dtDob" placeholder="Enter the Date of Birth"></p>
+            <p>
+                Select UR Fav Hobbies:
+                <input type="checkbox" id="chkCricket">Cricket
+                <input type="checkbox" id="chkFootball">Football
+                <input type="checkbox" id="chkTravel">Travel
+                <input type="checkbox" id="chkPaint">Painting
+                <input type="checkbox" id="chkMovies">Movies
+            </p>
+            <p>
+                Select UR Fav Actor:
+                <input type="radio" name="rdActor">Tom Cruise
+                <input type="radio" name="rdActor">Danny Day Lewis
+                <input type="radio" name="rdActor">Denzel Washington
+                <input type="radio" name="rdActor">Leonardo Di Caprio
+                <input type="radio" name="rdActor">Slivestor Stalone
+                <input type="radio" name="rdActor">Bruce Willis
+            </p>
+            <p>
+                Rate UR Self in HTML/CSS: <input id="txtRange" onchange="onChange()" type="range" min="1" max="10">
+                <span id="spRate"/>
+            </p>
+            <p>Select UR Qualification:
+                <select>
+                    <option>Graduation</option>
+                    <option>Under Graduation</option>
+                    <option>Post Graduation</option>
+                    <option>P.hd</option>
+                    <option>Schooling</option>
+                </select>
+            </p>
+            <p>
+                Select UR State in India:
+                <datalist id="dtList">
+                    <option>Karnataka</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Tamilnadu</option>
+                    <option>Kerala</option>
+                    <option>Goa</option>
+                    <option>Pondicherry</option>
+                    <option>Telangana</option>
+                    <option>Maharashtra</option>
+                    <option>Gujarat</option>
+                    <option>Rajastan</option>
+                    <option>Punjab</option>
+                    <option>Hariyana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Ladakh-Jummu</option>
+                    <option>Kashmir</option>
+                    <option>Uttarakhand</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Bihar</option>
+                    <option>Jharkhand</option>
+                    <option>West Bengal</option>
+                    <option>Odisha</option>
+                    <option>Chattisgarh</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Assam</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Sikkim</option>
+                    <option>Mizoram</option>
+                </datalist>
+                <input type="text" list="dtList"></p>
+            <p>Select UR Background color for the form: <input type="color" id="txtColor"></p>
+            <p>
+                Select the file of the picture U want to upload: <input type="file" id="txtFile">
+            </p>
+            <p>
+                <input type="button" onclick="onSubmit()" value="Register"/>
+                <input type="reset" value="Cancel"/>
+            </p>
+        </form>
+    </div>
+    <div>
+        <h2>Points to remember:</h2>
+        <ul>
+            <li>Forms are the way of taking user inputs in html.</li>
+            <li>Forms allow to create input tags to take the inputs that could be text to email to phoneno or any other kind including fileName</li>
+            <li>It has 2 attributes called action and method. action is used to mention the file that processes the form contents when submited. The method will take values like POST, PUT, GET to define the direction of the data transfer from the form.</li>
+            <li>Form will have a submit button that is clicked after the entries are filled by the User. This processes the form based on the action value set.</li>
+            <li>For client side programming, action attribute does not make any sense as it is used only for server side programming. </li>
+            <li>
+                Input type can have any of the following values:
+                <div>
+                    <ol>
+                        <li>Text</li>
+                        <li>Number</li>
+                        <li>Email</li>
+                        <li>Date/DateTime</li>
+                        <li>File</li>
+                        <li>Search</li>
+                        <li>Button</li>
+                        <li>CheckBoxes</li>
+                        <li>Radio</li>
+                        <li>range</li>
+                    </ol>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

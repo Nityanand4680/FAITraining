@@ -12,6 +12,7 @@
         <a href="./Ex01-Basics.html">Home</a>
         <a href="./Ex02-Lists.html">Lists</a>
         <a href="./Ex03-Tables.html">Tables</a>
+        <a href="./Ex04-MediaExample.html">Media</a>
         <a href="">Home</a>
         <a href="">Home</a>
     </nav>
@@ -19,12 +20,12 @@
     <div>
         <h2>Table of Records</h2>
         <section>
-            <table border="1" style="width: 100%; text-align:center">
+            <table style="width: 100%; text-align:center">
                 <thead>
                     <tr>
-                        <th>ProductId</th>
-                        <th>Product Name</th>
-                        <th>Product Price</th>
+                        <th style="width: auto;">ProductId</th>
+                        <th style="width: 55%;">Product Name</th>
+                        <th style="width: 30%;">Product Price</th>
                         <th>Current Stock</th>
                     </tr>
                 </thead>
@@ -67,6 +68,18 @@
                 </tfoot>
             </table>
         </section>
+    </div>
+    <div>
+        <h2>Points to remember</h2>
+        <ul style="list-style-type: square ;">
+            <li>table is the tag used to create tables in html</li>
+            <li>U can divide the table into thead, tbody and tfoot</li>
+            <li>A row is represented using a tag called <b>tr</b></li>
+            <li>A cell in the row is represented using a tag called <b>td or th</b></li>
+            <li>U can use styles like width, text-align to set new styles to the table</li>
+            <li>tables dont have borders by default, U can set them by using an attribute called table border setting its value to 1</li>
+            <li>If a table cell has to span across multiple columns, U could use colspan attribute for that cell and  allow it span across the columns</li>
+        </ul>
     </div>
 </body>
 </html>
