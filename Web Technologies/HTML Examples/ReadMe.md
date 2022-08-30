@@ -1,0 +1,12 @@
+# HTML Training
+- HTML basics
+- Creating HTML Pages
+- head, body
+- headings in HTML
+- div, section, nav, p
+- Using Lists
+- Using Images
+- Using Tables
+- Using Forms
+- Using CSS in html pages
+- Internal vs. Inline vs. External Styling. 
