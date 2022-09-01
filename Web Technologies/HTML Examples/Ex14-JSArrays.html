@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="CommonStyle.css">
     <title>Document</title>
     <script>
+
+        function display(data){
+            debugger;
+            const p = document.createElement("p");
+            if (Array.isArray(data)) {
+                p.innerHTML = "<ol>";
+                data.forEach(element => {
+                    p.innerHTML += `<li>${element}</li>`
+                });
+                p.innerHTML += '</ol>'
+            } else {
+                const text = document.createTextNode(data);
+                p.appendChild(text);
+            }
+            document.body.appendChild(p);
+        }
         function simpleArrayExample() {
             let elements = [];//Blank Array...
             let fruits = ["Apples", "Mangoes", "Oranges"]
@@ -38,14 +54,34 @@
             const input = document.getElementById("txtName").value;
             //add the input to the array. 
             myFavourites.push(input);
+            document.getElementById("txtName").value = "";//clear the old input...
             //display the elements of the array into the p tag.
             const p = document.getElementById("pList"); 
             p.innerHTML = "<ol>";
             for (const fav of myFavourites) {
                 p.innerHTML += "<li>" + fav + "</li>";
-            }    
+            } 
+            p.innerHTML += "</ol>";
         }
-
+        function onBtnRemove(){
+            //Ask the user to enter the Restaurant he/she wants to remove. 
+            const name = prompt("Enter the name of the restaurant U want to remove");
+            //find the index of the restaurant that U want to remove. 
+            const index = myFavourites.indexOf(name);
+            if(index == -1){
+                alert("This is not UR Fav Restaurant to remove")
+                return;
+            }
+            //Remove the element.
+            myFavourites.splice(index,1);//Removes 1 element from the index specified in the first arg  
+            //refresh the p element with fresh data. 
+            const p = document.getElementById("pList"); 
+            p.innerHTML = "<ol>";
+            for (const fav of myFavourites) {
+                p.innerHTML += "<li>" + fav + "</li>";
+            } 
+            p.innerHTML += "</ol>";
+        }
     </script>
 </head>
 <body>
@@ -57,6 +93,7 @@
             Enter UR Favourite Restaurant: 
             <input id="txtName"/>
             <button onclick="onBtnClick()">Add to List</button>  
+            <button onclick="onBtnRemove()">Remove from List</button>  
         </p>
         <div>
             Our Fav List of Hotels:
