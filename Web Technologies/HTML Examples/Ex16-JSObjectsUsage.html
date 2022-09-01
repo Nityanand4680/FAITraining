@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CommonStyle.css">
+    <script src="scripts/classesExample.js"></script> 
+    <script>
+        let db = new CustomerDatabase();//create the obejct of the class
+        function displayAll(){
+            const table = document.getElementById("tblRecords");
+            table.innerHTML = `<tr><th>Customer ID</th><th>Customer Name</th><th>Customer Address</th></tr>`;
+            const data = db.data;
+            for (const cst of data) {
+                const rec = `<tr><td>${cst.id}</td><td>${cst.name}</td><td>${cst.address}</td></tr>`;
+                table.innerHTML += rec;
+            }
+        }
+        function addNewCustomer(){
+            const id = document.getElementById("cstId").value;
+            const name = document.getElementById("cstName").value;
+            const address = document.getElementById("cstAddress").value;
+            const cst = new Customer(id, name, address);
+            db.addRecord(cst);
+            displayAll();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Add new record</h2>
+        <p><input type="number" id="cstId" placeholder="Enter the ID"/></p>
+        <p><input type="text" id="cstName" placeholder="Enter the Name"/></p>
+        <p><input type="text" id="cstAddress" placeholder="Enter the Address"/></p>
+        <p><button onclick="addNewCustomer()">Add New Record</button></p>
+    </div>
+    <div>
+        <table border="1" id="tblRecords">
+
+        </table>
+    </div>
+</body>
+</html>
