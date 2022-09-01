@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Data Conversion</title>
+    </head>
+    <body>
+        <h2>Points to remember:</h2>
+        <ul>
+            <li>All inputs from the HTML elements will be in the form of strings</li>
+            <li>There are 2 APIs to convert strings to numbers</li>
+            <li>parseInt fn  is used to convert a string to a integer number</li>
+            <li>parseFloat fn  is used to convert a string to a floating number</li>
+            <li>U can use isNan to check for the number input. If the string is not a valid number, then it will be called as NaN(Not a Number). It is recommended to use Number.isNaN instead of the global isNaN method.</li>
+        </ul>
+        <script>
+            let status = true;
+            const firstValue = parseFloat(prompt("Enter a number to add"));
+            if(Number.isNaN(firstValue)){
+                alert("It is not a valid number");
+                status = false;
+            }
+            const secondValue = parseFloat(prompt("Enter a number to add"));
+            if(Number.isNaN(secondValue)){
+                alert("It is not a valid number");
+                status = false;
+            }
+            const operation = prompt("Enter the operation as : +, -, * or /");
+            let result= 0.
+            if(status == true){
+            switch (operation) {
+                case "+":
+                    result = firstValue + secondValue;
+                    break;
+                case "-":
+                    result = firstValue - secondValue;
+                    break;
+                default:
+                    result = 0.0;
+                    break;
+            }  
+            document.write(`The result of the operation ${operation} is ${result}`);
+        }else
+            document.write(`The operation could not be completed because of invalid inputs`);
+        </script>
+
+    </body>
+
+</html>

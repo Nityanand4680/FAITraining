@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CommonStyle.css">
+    <title>Document</title>
+    <script>
+        function simpleArrayExample() {
+            let elements = [];//Blank Array...
+            let fruits = ["Apples", "Mangoes", "Oranges"]
+            fruits.push("Bananas");//add element at last
+            fruits.unshift("Pine Apples");//add element at first...
+
+            //using for...of to access values of the array
+            for (const fruit of fruits) { //for...of is similar to foreach of C#.
+                console.log(fruit);
+            }
+            //using for...in loop for accessing index and value
+            for (const index in fruits) {
+                console.log(`Index: ${index}: Value : ${fruits[index]}`)
+            }
+            console.log("The index of the element: " + fruits.indexOf("Bananas"));
+            console.log("The total no of elements: " + fruits.length)
+
+            //Using foreach function..
+            fruits.forEach(function (value, index) {
+                console.log(`Index: ${index}: Value : ${value}`);//get the value of the element.
+                console.log(index); //get the index of the element
+            })
+        }
+        //simpleArrayExample();
+        //create a blank Array...
+        let myFavourites = [];
+        function onBtnClick(){
+            //take the input from the user...
+            const input = document.getElementById("txtName").value;
+            //add the input to the array. 
+            myFavourites.push(input);
+            //display the elements of the array into the p tag.
+            const p = document.getElementById("pList"); 
+            p.innerHTML = "<ol>";
+            for (const fav of myFavourites) {
+                p.innerHTML += "<li>" + fav + "</li>";
+            }    
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Arrays in JS</h1>
+    <hr>
+    <div>
+        <h2>Demo on Arrays: </h2>
+        <p>
+            Enter UR Favourite Restaurant: 
+            <input id="txtName"/>
+            <button onclick="onBtnClick()">Add to List</button>  
+        </p>
+        <div>
+            Our Fav List of Hotels:
+            <p id="pList">
+
+            </p>    
+        </div>
+    </div>
+    <div>
+        <h2>Points to remember</h2>
+        <ol>
+            <li>Arrays are of object type in JS</li>
+            <li>It has a mix of collections and arrays concept in it. Arrays in JS allow to add, remove, update the data dynamically like Collections</li>
+            <li>Newer version of JS also has MAP which works like Dictionary</li>
+            <li>
+                <div>
+                    Some of the methods:
+                    <ul>
+                        <li>push: To add new elements to the bottom of the list</li>
+                        <li>unshift: To add element to the begining of the list</li>
+                        <li>shift: To remove the first element and return it.</li>
+                        <li>splice: To remove the element</li>
+                        <li>filter: to find elements on matching criteria</li>
+                        <li>find: to find the first occurance of a single element on matching criteria</li>
+                        <li>findIndex : To get the index of the matching Element</li>
+                        <li>includes: to check if the element is in the list or not, it returns boolean</li>
+                        <li>length: gets the no of elements within the array.</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                There are 4 ways to iterate the elements of an array:
+                <div>
+                    <ol>
+                        <li>for loop: Use the index to access the elements. for loop can also be used without the scope of a array. It allows to move forward as well as backward in the looping structure.</li>
+                        <li>for...of: Used to access the elements using iterator. Works similar to foreach statement. Introduced in ES7.</li>
+                        <li>for...in: Used to acceess the elements using index. Works similar to For loop, except for loop can work on non collections also and it can be reversed. </li>
+                        <li>Array.foreach: Used in earlier versions of JS where foreach is a function that takes a callback function for performing the iteration.  </li>
+                    </ol>
+                </div>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

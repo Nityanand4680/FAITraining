@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CommonStyle.css">
+    <script src="scripts/mathFunctions.js"></script>
+</head>
+<body>
+    <div>
+        <h2>External Files in JS</h2>
+        <ol>
+            <li>If U want a set of functions that has to be used in multiple documents of HTML, it should be created as External JS files</li>
+            <li>External JS files are saved with extension .js</li>
+            <li>The file is included in the html document using script tag and with an attribute to it as src. The scr contains the relative path of the script file</li>
+            <li>U should use seperate script tag for using the script functions</li>
+        </ol>
+    </div>
+    <script>
+        const value = addFunc(123, 23);
+        alert(value); //146 is displayed
+
+        const mulValue = mulFunc(13,2);
+        alert(mulValue)//26 is displayed
+    </script>
+</body>
+</html>

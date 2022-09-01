@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CommonStyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Calculator App!!</h2>
+    <div>
+        <input type="number" placeholder="Enter the First Value" id="txtFirst" />
+        <select id="slOperations">
+            <option>Add</option>
+            <option>Subtract</option>
+            <option>Multiply</option>
+            <option>Divide</option>
+        </select>
+        <input type="number" placeholder="Enter the second Value" id="txtSecond" />
+        <button onclick="buttonHandler()"> = </button>
+        <span id="spResult"></span>
+    </div>
+    <script>
+        //Map this function to the click event of the button. 
+        function buttonHandler() {
+            //take the input of the first, second and operation value. 
+            const fValue = parseFloat(document.getElementById("txtFirst").value);
+            const sValue = parseFloat(document.getElementById("txtSecond").value);
+            const operation = document.getElementById("slOperations").value;
+            //compute the result based on the selected operation. 
+            let result = 0.0;
+            switch (operation) {
+                case "Add":
+                    result = fValue + sValue;
+                    break;
+                case "Subtract":
+                    result = fValue - sValue;
+                    break;
+                case "Multiply":
+                    result = fValue * sValue;
+                    break;
+                case "Divide":
+                    result = fValue / sValue;
+                    break;
+            }
+            //display the result into the span element.
+            const spElement = document.getElementById("spResult");
+            spElement.innerText = result;
+        }
+    </script>
+</body>
+
+</html>

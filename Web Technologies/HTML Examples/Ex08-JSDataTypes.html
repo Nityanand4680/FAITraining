@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="CommonStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const constData = "Sample Data";
+        let exdata = "Sample Data";
+        let value = 213;//Numbers
+        let stringValue = "Phaniraj";//strings
+        let tryout = true;//boolean
+        let data = ["Apples", "Mangoes", "Oranges"]//Arrays in JS
+        console.log(typeof(value) + " is the data type of value");//number
+        console.log(typeof(stringValue) + " is the data type of stringValue");//string
+        console.log(typeof(tryout) + " is the data type of tryout");//boolean
+        console.log(typeof(data) + " is the data type of data");//object. 
+        let someValue;
+        console.log(typeof(someValue) + " is the data type of someValue");
+        console.log(`${typeof(someValue)} is the data type of someValue`);
+    </script>
+    <h1>Data types in JavaScript</h1>
+    <hr>
+    <h2>Points to remember:</h2>
+    <ul>
+        <li>There are 3 keywords to declare data in JS: var, let and const.</li>
+        <li>var is the older version which is no longer recommended. let and const are the prefered ones. const is used to store the data that does not change. let is used to store variables. They are all local variables.</li>
+        <li>JS is scope based. The let is more scope based compared to var. var is now obselete. However, for backward compatibility var is still supported by the newer JS interpretors. </li>
+        <li>variables declared but unassigned are called as undefined data. Any variable that is refered without assignment are called undefined data</li>
+        <li>PS: The output of the script is displayed in the console of the browser.</li>
+        <li>U can use interpolation syntax for creating string literals with variable data. We use backlit key to start the string and end it with backlit again</li>
+    </ul>    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Elements and Events</title>
+</head>
+<body>
+    <div>
+        <h2>Points to remember</h2>
+        <ol>
+            <li>HTML Document is programmatically represented as a Tree structure of DOM Elements. DOM stands for Document object Model</li>
+            <li>Every element of the page is represented as a DOM Element and will be of a tree view hirarchy where U have children, siblings and parent elements.</li>
+            <li>document is the root element/node of the Document. It represents the html document. Under document, U have elements in the form of a tree-view structure. It can be programmatically accessed by document object or window.document object. With document, we can access/refer any element of the document using JS programming, unless it is yet to be created. </li>
+            <li>Element will have properties, methods and events which can be dynamically modified using JS.</li>
+            <li>T</li>
+        </ol>
+    </div>
+    <script>
+        function onClick(){
+            //debugger;
+            let collection = document.getElementsByTagName("li");
+            for (let index = 0; index < collection.length; index++) {
+                const element = collection[index];
+                console.log(element);
+            }
+        }
+        function addParagraph(){
+            const content = document.createElement("p");//create a new p tag
+            const textNode = document.createTextNode("Simple Text to be appended to the paragraph");//create a new text content
+            content.appendChild(textNode);//add the text content to p.
+            document.body.appendChild(content);//add the p with content into document.
+        }
+
+        function addItemsToList(){
+            const list = document.createElement("ol");
+            let item = document.createElement("li");
+            item.appendChild(document.createTextNode("Apples"));
+            list.appendChild(item);
+
+            item = document.createElement("li");
+            item.appendChild(document.createTextNode("Mangoes"));
+            list.appendChild(item);
+
+            item = document.createElement("li");
+            item.appendChild(document.createTextNode("Oranges"));
+            list.appendChild(item);
+            document.body.append(list);
+        }
+        addItemsToList();//Adds an ordered list with items in it. 
+        addParagraph();//Call the function here...
+        document.onclick = onClick;//Document has an event called click whose handler is onclick. It means that when this document is clicked, the associated function will be invoked. This is similar to the delegates example we learnt in C#. onClick is the event handler for the click event of the document. 
+    </script>
+</body>
+</html>

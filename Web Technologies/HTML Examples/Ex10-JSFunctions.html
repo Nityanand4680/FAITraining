@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JS</title>
+</head>
+<body>
+    <script>
+        //Syntax of a Function in js.
+        function addFunc(v1 , v2) {
+            return v1 + v2;
+        }//function that returns a value
+
+        function simpleFunc(){
+            alert("Simple Func")
+        }//void functions. 
+
+        //Call the fns..
+        const retVal = addFunc(123, 23);
+        alert(retVal);
+
+        ////////////////LAMBDA METHODS WERE INTRODUCED IN ES 6/////////////////////
+        const subFunc = (v1, v2) => v1 - v2; //Lambda function in JS...
+
+        const sqrtFunc = (v1) => Math.sqrt(v1);
+
+        const sqrFunc  = (v1) => v1 * v2;
+        //////////////////////////////////////////////////////////////////
+
+        simpleFunc();
+        alert(sqrtFunc(25));
+    </script>
+    <div>
+        <h2>Points to remember</h2>
+        <ol>
+            <li>Function declaration in JS is done by using function keyword.</li>
+            <li>All data type declarations are let here, so no need to give the declaration keywords like var, let or const</li>
+            <li>Return type of the function is not specified. The function will return a value only if it has return statement in its implementation</li>
+            <li>Functions can also return an object or an array in JS</li>
+            <li>Functions can be anonymous/lambda based.</li>
+        </ol>
+    </div>
+</body>
+</html>

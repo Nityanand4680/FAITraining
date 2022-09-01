@@ -66,10 +66,10 @@ tr:nth-child(odd){
     margin:5px;
     padding: 5px;
 }
-input{
+/* input{
   border: 2px solid blue;
   background-color: yellow;   
 }
 input:focus{
     background-color: red;
-}
+} */
