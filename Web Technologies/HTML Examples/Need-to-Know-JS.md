@@ -1,0 +1,32 @@
+## Need to answer these:
+- What is JS?
+- What are the different kinds of creating variables in JS?
+- What are the internal data types supported by JS?
+- How to convert a string to a number-float as well as int?
+- How to know the datatype of a variable in JS?
+- Understand let vs. var vs. const.
+- How to create functions in JS?
+- Different ways of creating functions in JS?
+- How to create an Array in JS?
+- What are the APIs to insert, remove, replace, find, findAll
+- How to create Classes in jS?
+- Different ways to create objects in JS.
+- Inheritance in JS.
+- DOM Manipulations in an HTML using JS.
+- What is an Event and an Event Handler?
+- How to map an event with an event handler?
+- How to get the value of an input element in HTML?
+- How to get/set value for container elements like div, p, span. 
+- What is difference b/w innerHTML and innerText and value?
+- What are the different types of loops available in JS?
+- When to use for, for..of, and for...in JS?
+- What is the difference b/w getElementById, getElementsByTagName, getElementsByClassName
+- What are the different UI-based Functions in HTML and JS?
+- What is meant by Strict Mode in JS?
+- Try the following examples:
+- How to submit a Form in HTML?
+- How to append a Table with records from an Array of objects.
+- How do read values from input boxes?
+- How to read values from Checkboxes and extract the data.
+- How to enable and disable buttons based on a Radio button. 
+- How do validate the data before the user submits the Form?
