@@ -9,13 +9,45 @@
     <script src="scripts/classesExample.js"></script> 
     <script>
         let db = new CustomerDatabase();//create the obejct of the class
+        function initialize(){
+            db.addRecord(new Customer(123, "Phaniraj", "Bangalore"))
+            db.addRecord(new Customer(124, "Raghunath", "Mysore"))
+            db.addRecord(new Customer(125, "Zohra", "Mysore"))
+            db.addRecord(new Customer(126, "David", "Mangalore"))
+            db.addRecord(new Customer(127, "Binu George", "Thrissur"))
+        }
+        function getDetails(id){
+            const foundEmp = db.findRecord(id);
+            if(foundEmp == undefined){
+                alert("Employee not found");
+                return;
+            }
+            document.getElementById("cstId").value = foundEmp.id;
+            document.getElementById("cstName").value = foundEmp.name;
+            document.getElementById("cstAddress").value = foundEmp.address;
+            document.getElementById("btnUpdate").disabled = false;
+        }
         function displayAll(){
             const table = document.getElementById("tblRecords");
-            table.innerHTML = `<tr><th>Customer ID</th><th>Customer Name</th><th>Customer Address</th></tr>`;
+            table.innerHTML = `<tr><th>Customer ID</th><th>Customer Name</th><th>Customer Address</th><th>Options</th></tr>`;
             const data = db.data;
             for (const cst of data) {
-                const rec = `<tr><td>${cst.id}</td><td>${cst.name}</td><td>${cst.address}</td></tr>`;
+                const rec = `<tr><td>${cst.id}</td><td>${cst.name}</td><td>${cst.address}</td><td><a href="#" onClick= 'getDetails(${cst.id})'>Edit</a></td></tr>`;
                 table.innerHTML += rec;
+            }
+        }
+        function updateRec(){
+            //get all the inputs/
+            const id = document.getElementById("cstId").value;
+            const name = document.getElementById("cstName").value;
+            const address = document.getElementById("cstAddress").value;
+            //create the Customer object...
+            const cst = new Customer(id, name, address);
+            //call the customerdatabase API...
+            try {
+                db.updateRecord(id, cst);
+            } catch (error) {
+                alert(error);
             }
         }
         function addNewCustomer(){
@@ -24,23 +56,36 @@
             const address = document.getElementById("cstAddress").value;
             const cst = new Customer(id, name, address);
             db.addRecord(cst);
+            document.getElementById("cstId").value = "";
+            document.getElementById("cstName").value = "";
+            document.getElementById("cstAddress").value = "";
             displayAll();
         }
+        window.addEventListener('load', initialize);
     </script>
 </head>
 
 <body>
+    <nav>
+        <ul style="list-style-type: none;">
+            <li><a class="link" onclick="displayAll()" href="#">All Records</a></li>
+            <li><a class="link" href="">Add New</a></li>
+            <li><a class="link" href="">About Us</a></li>
+        </ul>
+    </nav>
     <div class="card">
-        <h2>Add new record</h2>
-        <p><input type="number" id="cstId" placeholder="Enter the ID"/></p>
-        <p><input type="text" id="cstName" placeholder="Enter the Name"/></p>
-        <p><input type="text" id="cstAddress" placeholder="Enter the Address"/></p>
-        <p><button onclick="addNewCustomer()">Add New Record</button></p>
-    </div>
-    <div>
+        <h2>List of Employees with us</h2>
         <table border="1" id="tblRecords">
 
         </table>
+    </div>
+    <div class="card">
+        <h2>Employee Details</h2>
+        <p><input type="number" id="cstId" placeholder="Enter the ID"/></p>
+        <p><input type="text" id="cstName" placeholder="Enter the Name"/></p>
+        <p><input type="text" id="cstAddress" placeholder="Enter the Address"/></p>
+        <p><button onclick="addNewCustomer()" id="btnAdd" disabled>Add New Record</button>
+        <button onclick="updateRec()" id="btnUpdate" disabled>Update Record</button></p>
     </div>
 </body>
 </html>
