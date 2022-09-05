@@ -39,3 +39,22 @@ Training for Basic Programming
 - Basics of HTML Document
 - Lists
 - Tables
+
+## Day 10
+### SQL Server Programming
+- Creating SQL server database
+- Create, Drop and Alter Database
+- Using built in Stored Procs: sp_renamedb, sp_tables, sp_databases, sp_rename, sp_help
+- Tables -> Create, Drop and Alter. 
+- Primary key and Foreign key relations
+- Insertions -> Insert into Dept and Emp Table
+- Queries: SELECT, UDPATE, DELETE
+- SELECT Statement:
+  - SELECT
+  - WHERE
+  - WHERE with AND, OR, BETWEEN
+  - GROUP BY
+  - ORDER BY along with DESC
+  - GROUP BY AND HAVING
+  - SUB QUERIES
+  - TRUNCATE.
