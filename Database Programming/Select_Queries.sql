@@ -55,7 +55,17 @@ Select Empname, EmpAddress, COALESCE(DeptId, 0) As DeptId FROM EmpRecords
 
 
 Select EmpName, EmpAddress, COALESCE(DeptName, 'Unallocated') As DeptName From EmpRecords Left join DeptTable on EmpRecords.DeptId = DeptTable.DeptId
+----------------Getting top rows------------------------------
+SELECT TOP(50) EmpName FROM EMPTABLE
+-------------------------Using between--------------------------------
+SELECT EMpName From EmpTable where EmpSalary between 100000 and 150000.
+--------------Nested query in SQL---------------------
+SELECT EmpTable.* from EmpTable WHERE EmpSalary = (SELECT MAX(EmpSalary) FROM EmpTable)
 
+--Get the records whose salary is more than the avg salary of the company...
 
+--Get the EmpNames whose names are duplicate----------------
+SELECT EMPNAME, COUNT(EmpName) AS EMPCOUNT FROM EMPTABLE 
+GROUP BY EMPNAME Having COUNT(EmpName) > 1 
 
 
