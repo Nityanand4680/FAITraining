@@ -56,5 +56,12 @@ Training for Basic Programming
   - GROUP BY
   - ORDER BY along with DESC
   - GROUP BY AND HAVING
+  - JOINS
+    - INNER JOINS
+    - LEFT JOINS
+    - RIGHT JOINS
+    - SELF JOINS
   - SUB QUERIES
   - TRUNCATE.
+  - SELECT INTO
+  - INSERT INTO ... SELECT
