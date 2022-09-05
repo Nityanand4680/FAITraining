@@ -1,0 +1,51 @@
+SQL server is a database management software used to store the data in various formats and in a secure manner. Developed by Microsoft and has maintained its dominance from the past 25 years. 
+Sql server is a database of databases. It has its own set of databases to manage the databases of the server. 
+User defined databases can be created either by using an IDE called SQL Server management studio or Using command prompt.
+SQL server comes with a express edition that can be used for learning purposes and storing data in a standalone machines. 
+However, for commercial purposes, U should purchase an Enterprise edition that comes with networking support, mutli user support and secured Environment on Windows OS.
+
+SQL server provides 2 kinds of authentication: Windows Authentication and SQL server authentication. 
+Windows Authenticatin ensures that any Windows user of that machine is authenticated automatically to work on that installation of SQL server.
+SQL Server Authentication ensures that the user must not only be a Windows User but also should have an additional authentication as a SQL server user. 
+All Windows users need not be SQL server users. However, the converse of it holds good. 
+
+SQL Server comes with its own set of databases which is used to manage the databases. master, model,msdb and tempDB. 
+Master is the root database that contains data about the users, logs, databases and many more that makes the working of the SQL server. 
+ModelDb contains the schemas of the frequently used databases and using these schemas,  U can create User defined databases in a faster manner. 
+MSDB contains the tables required for the management of the SQL server. 
+TempDB contains the temp tables that are scoped to the instance of the SQL server. We use Tempdb for creating temp tables because we might not want the data to be available after the server is shut down. 
+
+SQL server uses T-SQL(Transact-SQL) for its SQL operations.T-SQL is the customized SQL used for working with SQL Server only 
+
+SQL Server allows you to create Procedures which are created when U have statments that are frequently executed in UR Database. We call them as Stored Procedures. They are simply a block of SQL statements that are used quite frequently in ur app development. Stored Procs are more optimized compared to normal SQL statements. 
+SQL server itself comes with a set of Stored Procs that can be used for the maintainence of the database like renaming, getting the list of databases, tables in the database, renaming the table, columns and many more.
+
+SQL server supports Functions that can be used inside a Query. Functions are predefined set of statments that can be executed to get scalar values from the database. Single values are called as Scalar Values. With functions U can also get Table Values called as TVFs(Table value functions). 
+Min, Max, Count are some of the SVFs of SQL server. 
+
+UR Database is a collection of Units called Tables. Each table is a collection of data in the form of rows and columns. Any table has to be defined before it is being used. 
+The definition of the table structure is called as SCHEMA of the table. 
+We have data creational statements like Create, Alter and Drop to perform the table operations 
+While creating the table, U should be clear about the data, its consistency and its association with other table data. As the data is related to one or more tables, the database is called as Relational Database. We also have Non-relational Databases. 
+
+While creating the tables, we recommend to follow the degrees of Normalization that determines the structure of UR tables in the database. You must follow atleast 3 of the 5 Degrees of Normalization. Refer the w3Schools on understanding the Normalization in SQL. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
