@@ -5,8 +5,7 @@ Note: This exercise is based on the HR database.
 Before you begin, 
 
 * Download the script file HR.sql 
-* Import the same into H2 database using the `runscript from 'path-to-file'` command
-* Get yourself familiar with the table structure.
+* Execute the Script in the SQL server Database. 
 
 ## Exercise questions
 
