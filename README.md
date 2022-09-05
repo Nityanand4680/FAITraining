@@ -38,8 +38,35 @@ Training for Basic Programming
 ### HTML Programming
 - Basics of HTML Document
 - Lists
-- Tables
+- Tables.
+- CSS with Selectors: Element, Classname, Wild Charecter
+- Inline styling vs. Internal Styling vs. External Styling.
 
+## Day 7
+- Forms
+- Images. 
+- JavaScript Programming
+  - Basics
+  - Data Types
+  - Conversions
+  - Arrays
+  - Classes and Objects
+  - CRUD operations on a Repo Class
+  - DOM Manipulation
+
+## Day 8
+- Event Handling in HTML
+- Validations in HTML Document
+- Using addEventListener. 
+- Intro to Testing
+  
+## Day 9
+- Testing Basics
+- WhiteBox vs. Black Box vs. Grey Box.
+- 7 Principles of Testing
+- Attributes of Testing. 
+- Testing Scenarios.
+  
 ## Day 10
 ### SQL Server Programming
 - Creating SQL server database
