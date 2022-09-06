@@ -92,3 +92,13 @@ Training for Basic Programming
   - TRUNCATE.
   - SELECT INTO
   - INSERT INTO ... SELECT
+  
+## Day 11
+- Stored Procedures
+- Functions: Scalar and Table valued 
+- Triggers
+- Indexes
+- ADO.NET connected Model.
+- ADO.NET with Stored Procedures. 
+
+-
