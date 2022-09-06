@@ -1,4 +1,4 @@
-##ADO.NET Assignment
+## ADO.NET Assignment
 1. Create a Table called TestTable in the SQL Server with Columns of TestId, TestName, TestAmount
 2. Manually fill the data into the table from the backend itself. 
 3. Create a C# App that will display the records of the TestTable in the Console.
