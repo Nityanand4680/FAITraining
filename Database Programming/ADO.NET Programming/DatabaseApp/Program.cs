@@ -14,6 +14,9 @@
 using System.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using SampleConApp;
+using System.Data;
 
 namespace DatabaseApp
 {
@@ -59,15 +62,13 @@ namespace DatabaseApp
             {
                 using(var cmd = new SqlCommand("SELECT * FROM EMPTABLE", connection))
                 {
-                  
                     try
                     {
                         connection.Open();
                         SqlDataReader reader = cmd.ExecuteReader();
                         while (reader.Read())
                         {
-                            //Add to the collection.
-                            list.Add(createEmployee(reader));
+                            list.Add(createEmployee(reader));//Add to the collection.
                         }
                     }
                     catch (Exception ex)
@@ -77,21 +78,89 @@ namespace DatabaseApp
                 } 
                 return list.ToArray();
             }
-
         }
     }
     class Program
     {
         const string query = "SELECT * FROM EMPTABLE";
-
+        static string strConnection = ConfigurationManager.ConnectionStrings["myConnection"].ConnectionString;
 
         static void Main(string[] args)
         {
             //displayRecords();
-            var records = new DataComponent().GetAllEmployees();
-            if(records != null)
+            //displayRecordsAsEmployees();
+            //insertRecord();
+            updateRecordUsingStoredProc();
+        }
+
+        private static void updateRecordUsingStoredProc()
+        {
+            //Take inputs from the User and then call the stored proc...
+            int id = 107;
+            string name = "Vishwas";
+            string address = "Shimoga";
+            double salary = 150000;
+            int deptId = 2;
+            DateTime dt = new DateTime(1982, 06, 24);
+            string procName = "Fai_UpdateEmployee";
+            using(var connection = new SqlConnection(strConnection))
             {
-                foreach(var rec in records)
+                using(var cmd = new SqlCommand(procName, connection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    //set the properties. 
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@salary", salary);
+                    cmd.Parameters.AddWithValue("@deptId", deptId);
+                    cmd.Parameters.AddWithValue("@address", address);
+                    cmd.Parameters.AddWithValue("@dob", dt.ToString("MM/dd/yyyy"));
+                    try
+                    {
+                        connection.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (SqlException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+            
+        }
+        private static void insertRecord()
+        {
+            var name = Util.GetString("Enter the Name");
+            var address = Util.GetString("Enter the Address");
+            var salary = Util.GetDoubleNumber("Enter the Salary");
+            Console.WriteLine("Enter the date as dd/MM/yyyy");
+            var dt = DateTime.Parse(Console.ReadLine());
+            var deptId = Util.GetNumber("Enter the Dept ID");
+
+            string insertStatement= $"Insert into EmpTable values('{name}', '{address}',{salary},'{dt.ToString("MM/dd/yyyy")}', {deptId})";
+            using(SqlConnection con = new SqlConnection(strConnection))
+            {
+                using(SqlCommand cmd = new SqlCommand(insertStatement, con))
+                {
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();//For insert, delete and update
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+        }
+
+        private static void displayRecordsAsEmployees()
+        {
+            var records = new DataComponent().GetAllEmployees();
+            if (records != null)
+            {
+                foreach (var rec in records)
                     Console.WriteLine(rec);
             }
         }
