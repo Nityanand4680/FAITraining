@@ -90,7 +90,8 @@ namespace DatabaseApp
             //displayRecords();
             //displayRecordsAsEmployees();
             //insertRecord();
-            updateRecordUsingStoredProc();
+            //updateRecordUsingStoredProc();
+            insertRecordUsingStoredProc();
         }
 
         private static void updateRecordUsingStoredProc()
@@ -127,6 +128,44 @@ namespace DatabaseApp
                 }
             }
             
+        }
+
+        private static void insertRecordUsingStoredProc()
+        {
+            string name = "Nandhan Kumar";
+            string address = "Chennai";
+            double salary = 110000;
+            int deptId = 3;
+            DateTime dt = new DateTime(1977, 06, 24);
+            int generatedEmpID = 0;
+            string procName = "Fai_InsertEmployee";
+
+            using (var connection = new SqlConnection(strConnection))
+            {
+                using (var cmd = new SqlCommand(procName, connection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    //set the properties. 
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@salary", salary);
+                    cmd.Parameters.AddWithValue("@deptId", deptId);
+                    cmd.Parameters.AddWithValue("@address", address);
+                    cmd.Parameters.AddWithValue("@dob", dt.ToString("MM/dd/yyyy"));
+                    cmd.Parameters.AddWithValue("@empId", generatedEmpID);
+                    cmd.Parameters[5].Direction = ParameterDirection.Output;
+                    try
+                    {
+                        connection.Open();
+                        cmd.ExecuteNonQuery();
+                        generatedEmpID = Convert.ToInt32(cmd.Parameters[5].Value);
+                        Console.WriteLine("The Generated ID is " + generatedEmpID);
+                    }
+                    catch (SqlException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
         }
         private static void insertRecord()
         {
