@@ -66,7 +66,7 @@ Training for Basic Programming
 - 7 Principles of Testing
 - Attributes of Testing. 
 - Testing Scenarios.
-  
+# Week 3  
 ## Day 10
 ### SQL Server Programming
 - Creating SQL server database
