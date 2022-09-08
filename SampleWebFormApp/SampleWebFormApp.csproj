@@ -73,6 +73,7 @@
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
     <Content Include="ListDemo.aspx" />
+    <Content Include="NewEmployeeRegistration.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -92,6 +93,13 @@
     </Compile>
     <Compile Include="ListDemo.aspx.designer.cs">
       <DependentUpon>ListDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewEmployeeRegistration.aspx.cs">
+      <DependentUpon>NewEmployeeRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewEmployeeRegistration.aspx.designer.cs">
+      <DependentUpon>NewEmployeeRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
