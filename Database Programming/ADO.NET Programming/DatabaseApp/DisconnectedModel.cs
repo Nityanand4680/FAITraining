@@ -17,6 +17,7 @@
         const string STRQUERY = "SELECT * FROM EMPTABLE";
         static readonly string STRCONNECTION = ConfigurationManager.ConnectionStrings["myConnection"].ConnectionString;
         static DataSet ds = new DataSet("MyData");
+         
         //Ds has a collection of DataTable objects where each DataTable object has a collection of DataRows and DataColumns. 
 
         static List<Employee> getAllEmployees()
@@ -56,22 +57,78 @@
 
         }
         
+        static void updateRecordToDatabase()
+        {
+            var adapter = new SqlDataAdapter("SELECT * FROM EMPTABLE", STRCONNECTION);
+            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+            if (ds.Tables.Contains("MyEmpList"))//If its already there, remove it. 
+            {
+                ds.Tables.Remove("MyEmpList");//Delete the Table from the DS....
+            }
+            adapter.Fill(ds, "MyEmpList");//Get the fresh data...
+            //Create the values.
+            var name = "Jim Anderson";
+            var address = "London";
+            var salary = 56000;
+            var deptId = 4;
+            var id = 125;
+            var dob = new DateTime(1965, 7, 20);
+            foreach(DataRow row in ds.Tables["MyEmpList"].Rows)
+            {
+                if(Convert.ToInt32(row[0]) == id)
+                {
+                    row[1] = name;
+                    row[2] = address;
+                    row[3] = salary;
+                    row[4] = dob;
+                    row[5] = deptId;
+                    adapter.Update(ds, "MyEmpList");
+                    return;
+                }
+            }
+        }
+        static void addingRecordToDatabase()
+        {
+            var adapter = new SqlDataAdapter("SELECT * FROM EMPTABLE", STRCONNECTION);
+            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+            adapter.Fill(ds, "MyEmpList");//Another DataTable..
+            //Create the values.
+            var name = "Jim Rogerrson";
+            var address = "New York";
+            var salary = 56000;
+            var deptId = 4;
+            var dob = new DateTime(1965, 7, 20);
+
+            //Create a new Row in the dataset. 
+            DataRow row = ds.Tables["MyEmpList"].NewRow();
+            Console.WriteLine(row.RowState);
+            //Fill the rows with the data. 
+            row[1] = name;
+            row[2] = address;
+            row[3] = salary;
+            row[4] = dob;
+            row[5] = deptId;
+            //Add the filled row into the Rows Collection of the table
+            ds.Tables["MyEmpList"].Rows.Add(row);
+            Console.WriteLine(row.RowState);
+
+            adapter.Update(ds, "MyEmpList");
+
+        }
         static void Main(string[] args)
         {
 
             addEmployeesToCache();
-            //addDeptToCache();
-            var list = getAllEmployees();
-            foreach (var emp in list) 
-                Console.WriteLine(emp.EmpName);
-            //Read the data from the dataset...
-            //foreach(DataRow row in ds.Tables["mySetOfEmployees"].Rows)
-            //{
-            //    Console.WriteLine($"{row[1].ToString().ToUpper()} is from {row["EmpAddress"]}");
-            //}
-            Console.WriteLine("---------------------------------");
-            foreach(DataTable table in ds.Tables)
-                Console.WriteLine(table.TableName);
+            ////addDeptToCache();
+            //var list = getAllEmployees();
+            //foreach (var emp in list) 
+            //    Console.WriteLine(emp.EmpName);
+            //Console.WriteLine("----------------Display All Tables-----------------");
+            //foreach(DataTable table in ds.Tables)
+            //    Console.WriteLine(table.TableName);
+
+            addingRecordToDatabase();
+            updateRecordToDatabase();
         }
     }
 }

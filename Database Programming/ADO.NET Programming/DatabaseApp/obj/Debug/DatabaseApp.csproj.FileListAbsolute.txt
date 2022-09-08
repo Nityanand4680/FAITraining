@@ -1,0 +1,10 @@
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DatabaseApp\bin\Debug\DatabaseApp.exe.config
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DatabaseApp\bin\Debug\DatabaseApp.exe
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DatabaseApp\bin\Debug\DatabaseApp.pdb
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DatabaseApp\obj\Debug\DatabaseApp.csproj.CoreCompileInputs.cache
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DatabaseApp\obj\Debug\DatabaseApp.exe
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DatabaseApp\obj\Debug\DatabaseApp.pdb
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DatabaseApp\obj\Debug\DatabaseApp.csproj.AssemblyReference.cache
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DatabaseApp\bin\Debug\SampleDll.dll
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DatabaseApp\bin\Debug\SampleDll.pdb
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DatabaseApp\obj\Debug\DatabaseApp.csproj.CopyComplete

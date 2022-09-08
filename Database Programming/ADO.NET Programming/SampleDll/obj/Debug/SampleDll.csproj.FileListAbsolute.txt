@@ -1,0 +1,5 @@
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\SampleDll\obj\Debug\SampleDll.csproj.CoreCompileInputs.cache
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\SampleDll\bin\Debug\SampleDll.dll
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\SampleDll\bin\Debug\SampleDll.pdb
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\SampleDll\obj\Debug\SampleDll.dll
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\SampleDll\obj\Debug\SampleDll.pdb

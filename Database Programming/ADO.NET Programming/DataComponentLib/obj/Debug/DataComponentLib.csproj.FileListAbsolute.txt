@@ -1,0 +1,6 @@
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DataComponentLib\bin\Debug\DataComponentLib.dll
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DataComponentLib\bin\Debug\DataComponentLib.pdb
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DataComponentLib\obj\Debug\DataComponentLib.csproj.AssemblyReference.cache
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DataComponentLib\obj\Debug\DataComponentLib.csproj.CoreCompileInputs.cache
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DataComponentLib\obj\Debug\DataComponentLib.dll
+C:\Trainings\FAI\FAI-Training\Database Programming\ADO.NET Programming\DataComponentLib\obj\Debug\DataComponentLib.pdb
