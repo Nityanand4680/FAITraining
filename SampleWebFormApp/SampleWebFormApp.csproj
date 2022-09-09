@@ -70,13 +70,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DisplayData.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Images\pic1.png" />
+    <Content Include="Images\pic2.png" />
+    <Content Include="Images\pic3.png" />
+    <Content Include="Images\pic4.png" />
+    <Content Include="Images\pic5.png" />
+    <Content Include="Images\pic6.png" />
+    <Content Include="Images\pic7.png" />
     <Content Include="ListDemo.aspx" />
     <Content Include="NewEmployeeRegistration.aspx" />
+    <Content Include="PostBackFeature.aspx" />
+    <Content Include="QueryStringDemo.aspx" />
+    <Content Include="RecipientPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisplayData.aspx.cs">
+      <DependentUpon>DisplayData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayData.aspx.designer.cs">
+      <DependentUpon>DisplayData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -94,6 +112,7 @@
     <Compile Include="ListDemo.aspx.designer.cs">
       <DependentUpon>ListDemo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Product.cs" />
     <Compile Include="NewEmployeeRegistration.aspx.cs">
       <DependentUpon>NewEmployeeRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -101,7 +120,28 @@
     <Compile Include="NewEmployeeRegistration.aspx.designer.cs">
       <DependentUpon>NewEmployeeRegistration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PostBackFeature.aspx.cs">
+      <DependentUpon>PostBackFeature.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostBackFeature.aspx.designer.cs">
+      <DependentUpon>PostBackFeature.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStringDemo.aspx.cs">
+      <DependentUpon>QueryStringDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryStringDemo.aspx.designer.cs">
+      <DependentUpon>QueryStringDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipientPage.aspx.cs">
+      <DependentUpon>RecipientPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipientPage.aspx.designer.cs">
+      <DependentUpon>RecipientPage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -114,7 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
