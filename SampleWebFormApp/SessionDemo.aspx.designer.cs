@@ -11,7 +11,7 @@ namespace SampleWebFormApp
 {
 
 
-    public partial class DisplayData
+    public partial class SessionDemo
     {
 
         /// <summary>
@@ -24,21 +24,30 @@ namespace SampleWebFormApp
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// rpProducts control.
+        /// txtWord control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpProducts;
+        protected global::System.Web.UI.WebControls.TextBox txtWord;
 
         /// <summary>
-        /// grdCart control.
+        /// txtMeaning control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList grdCart;
+        protected global::System.Web.UI.WebControls.TextBox txtMeaning;
+
+        /// <summary>
+        /// grdWords control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdWords;
     }
 }
